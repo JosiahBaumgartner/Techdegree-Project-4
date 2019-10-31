@@ -9,13 +9,20 @@ class Game {
       {phrase: "say sike right now"},
       {phrase: "stonks"},
       {phrase: "flex tape"},
-      {phrase: "me and the boys"},
+      {phrase: "we live in a society"},
       {phrase: "now this is an avengers level threat"}
     ];
     this.activePhrase = null;
   }
   getRandomPhrase(){
   const randomNum = Math.floor(Math.random() * (5));
-  return game.phrases[randomNum];
+  const randomPhrase = new Phrase(game.phrases[randomNum]);
+  return randomPhrase;
   }
+  startGame(){
+    document.querySelector("#overlay").style.display = "none";
+    this.activePhrase = this.getRandomPhrase().phrase.phrase;
+    const livePhrase = new Phrase(this.activePhrase);
+    livePhrase.addPhraseToDisplay();
+  };
 }
