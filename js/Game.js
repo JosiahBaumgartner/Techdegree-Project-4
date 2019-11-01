@@ -10,17 +10,17 @@ class Game {
       {phrase: "stonks"},
       {phrase: "flex tape"},
       {phrase: "we live in a society"},
-      {phrase: "now this is an avengers level threat"},
+      {phrase: "this is an avengers level threat"},
       {phrase: "me and the boys"},
-      {phrase: "clap alien cheeks"},
+      {phrase: "dab on the haters"},
       {phrase: "let me in"},
       {phrase: "no i dont think i will"},
       {phrase: "its big brain time"},
-      {phrase: "perfectly balanced as all things should be"},
+      {phrase: "perfectly balanced"},
       {phrase: "spooky scary skeletons"},
       {phrase: "it aint much but its honest work"},
       {phrase: "ok boomer"},
-      {phrase: "i used the stones to destroy the stones"}
+      {phrase: "i dont even know who you are"}
     ];
     this.activePhrase = null;
   }
