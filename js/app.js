@@ -10,7 +10,7 @@ document.querySelector("#btn__reset").addEventListener("click", () => {
     key.classList.remove("chosen", "wrong")
     key.disabled = false;
   });
-  document.querySelectorAll(".tries").forEach((life) => life.innerHTML = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">');
+  document.querySelectorAll(".tries").forEach((life) => life.innerHTML = '<img src="images/pika-happy.png" alt="Happy Pikachu" height="35" width="35">');
   game = new Game();
   game.startGame();
 });
