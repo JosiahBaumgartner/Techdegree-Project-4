@@ -4,17 +4,42 @@
  class Phrase{
    constructor(phrase){
      this.phrase = phrase;
-   }
+   };
+
+   /**
+   * Display phrase on game board
+   */
    addPhraseToDisplay(){
-    for (let i = 0; i < this.phrase.length; i++){
-      document.querySelector("#phrase").querySelector("ul").appendChild(document.createElement("li"));
-      document.querySelector("#phrase").querySelector("ul").childNodes[i].innerText = this.phrase[i];
-      if (document.querySelector("#phrase").querySelector("ul").childNodes[i].innerText !== ""){
-        document.querySelector("#phrase").querySelector("ul").childNodes[i].classList.add("hide", "letter", this.phrase[i]);
+    const ul = document.querySelector("#phrase").querySelector("ul")
+    for (let i = 0; i < this.phrase.phrase.length; i++){
+      ul.appendChild(document.createElement("li"));
+      ul.childNodes[i].innerText = this.phrase.phrase[i];
+      if (ul.childNodes[i].innerText !== ""){
+        ul.childNodes[i].classList.add("hide", "letter", this.phrase.phrase[i]);
     } else {
-      document.querySelector("#phrase").querySelector("ul").childNodes[i].innerText = " ";
-      document.querySelector("#phrase").querySelector("ul").childNodes[i].classList.add("space");
+      ul.childNodes[i].innerText = " ";
+      ul.childNodes[i].classList.add("space");
+      }
     }
-    }
-  }
+  };
+
+  /**
+  * Checks if passed letter is in phrase
+  * @param (string) letter - Letter to check
+  */
+  checkLetter(letter){
+    return this.phrase.phrase.includes(letter);
+  };
+
+  /**
+  * Displays passed letter on screen after a match is found
+  * @param (string) letter - Letter to display
+  */
+  showMatchedLetter(letter){
+    document.querySelectorAll("."+letter).forEach((li) => {
+      li.classList.remove("hide");
+      li.classList.add("show");
+    });
+  };
+
 };
