@@ -30,7 +30,7 @@ class Game {
   * @return {Object} Phrase object chosen to be used
   */
   getRandomPhrase(){
-  const randomNum = Math.floor(Math.random() * (5));
+  const randomNum = Math.floor(Math.random() * (15));
   const randomPhrase = new Phrase(game.phrases[randomNum]);
   return randomPhrase;
   }
