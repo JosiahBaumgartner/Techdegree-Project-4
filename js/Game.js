@@ -50,7 +50,7 @@ class Game {
   * Checks if player has remaining lives and ends game if player is out
   */
   removeLife(){
-    document.querySelectorAll(".tries")[this.missed].innerHTML = '<img src="images/pika-surprised.png" alt="Surprised Pikachu" height="35" width="35">';
+    document.querySelectorAll(".tries")[this.missed].innerHTML = '<img src="images/pika-surprised.png" alt="Surprised Pikachu" height="50" width="50">';
     this.missed++;
     if(this.missed === 5){
       game.gameOver(false);
