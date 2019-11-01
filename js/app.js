@@ -20,3 +20,11 @@ document.addEventListener("click", () => {
     game.handleInteraction(event.target);
   }
 });
+
+
+// Extra Credit keyboard interaction.
+// document.addEventListener("keyup", () => {
+//   if(event.keyCode > 64 && event.keyCode < 91){
+//     game.handleInteraction(event.code.slice(3,4).toLowerCase());
+//   }
+// });
