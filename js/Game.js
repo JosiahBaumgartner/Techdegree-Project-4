@@ -65,11 +65,13 @@ class Game {
     if (gameWon){
       document.querySelector("#game-over-message").innerText = "You're meme supreme"
       document.querySelector("#overlay").classList.remove("start");
+      document.querySelector("#overlay").classList.remove("lose");
       document.querySelector("#overlay").classList.add("win");
       document.querySelector("#overlay").style.display = "";
     } else {
       document.querySelector("#game-over-message").innerText = "That ain't it cheif"
       document.querySelector("#overlay").classList.remove("start");
+      document.querySelector("#overlay").classList.remove("win");
       document.querySelector("#overlay").classList.add("lose");
       document.querySelector("#overlay").style.display = "";
     }
